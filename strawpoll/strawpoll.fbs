@@ -1,0 +1,28 @@
+// Example IDL file for our monster's schema.
+namespace Strawpoll;
+
+table Poll {
+  title:string;
+  options:[string];
+}
+
+table Result {
+  votes:[long];
+}
+
+enum RequestType:byte { Poll, Result }
+
+table Request {
+  type:RequestType;
+  fingerprint:string;
+  vote:long;
+}
+
+enum ResponseType:byte { Poll, Result, Error }
+
+table Response {
+  type:ResponseType;
+  poll:Poll;
+  result:Result;
+  error:string;
+}
