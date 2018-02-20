@@ -7,7 +7,7 @@ In Windows, it's easy to use _vcpkg_ as:
 ```shell
 vcpkg install openssl:x64-windows zlib:x64-windows libuv:x64-windows
 ```  
-(Make usre that, when installing _vcpkg_, you enable its use for all projects.)
+(Make usre that, when installing _vcpkg_, you enable its use for all projects.)  
 In Ubuntu:  
 ```shell
 sudo apt-get install libssl-dev zlib1g-dev
@@ -20,7 +20,7 @@ mkdir build.Windows
 cd build.Windows
 cmake -G "Visual Studio 15 2017 Win64" ..
 cmake --build . --target ALL_BUILD --config Debug
-```  
+```
 This will build _StrawPollSever.exe_ in _build.Windows/Debug_ and coppy the dependant DLLs there. When you run this executable, it starts a WebSocket server and listens on port 3003.  
   
 To start the client, navigate to _client_ folder and perform the usual webdev operations:  
